@@ -9,6 +9,15 @@ class Brod extends Model
 {
     use HasFactory;
 
+    protected $table = 'brodovi';
+
+    protected $fillable = [
+
+        'naziv',
+        'zemljaPorekla',
+        'godiste',
+    ];
+
     public function rezervacije()
     {
         return $this->hasMany(Rezervacija::class);
